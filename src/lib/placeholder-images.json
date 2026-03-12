@@ -1,0 +1,10 @@
+{
+  "placeholderImages": [
+    {
+      "id": "hero-lpo",
+      "description": "Bright, empty, modern living room with sunlight.",
+      "imageUrl": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1920&auto=format&fit=crop",
+      "imageHint": "modern living room"
+    }
+  ]
+}
