@@ -18,6 +18,7 @@ import dynamic from 'next/dynamic';
 const InstantQuoteSection = dynamic(() => import('@/components/instant-quote-section'));
 const TestimonialsMarquee = dynamic(() => import('@/components/testimonials-marquee'));
 import ScrollReveal from '@/components/scroll-reveal';
+import WhatsAppButton from '@/components/whatsapp-button';
 import LimpezaBefore from '@/imagens/LIMPEZA (3).png';
 import LimpezaAfter from '@/imagens/LIMPEZA.png';
 
@@ -209,17 +210,7 @@ export default function Home() {
                     size="lg"
                     className="rounded-full px-8 py-6 border-white/30 text-white bg-transparent hover:bg-white/12 backdrop-blur-sm"
                   >
-                    <Link 
-                    href={whatsappUrl} 
-                    onClick={(e) => {
-                      e.preventDefault();
-                      if (typeof window !== 'undefined' && window.gtag_report_conversion) {
-                        window.gtag_report_conversion(whatsappUrl);
-                      } else {
-                        window.open(whatsappUrl, '_blank');
-                      }
-                    }}
-                  >Falar no WhatsApp</Link>
+                    <WhatsAppButton href={whatsappUrl}>Falar no WhatsApp</WhatsAppButton>
                   </Button>
                 </div>
               </div>
@@ -365,17 +356,7 @@ export default function Home() {
               size="lg"
               className="rounded-full text-lg py-7 px-10 border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300 shadow-lg hover:shadow-primary/20"
             >
-              <Link 
-              href={whatsappUrl} 
-              onClick={(e) => {
-                e.preventDefault();
-                if (typeof window !== 'undefined' && window.gtag_report_conversion) {
-                  window.gtag_report_conversion(whatsappUrl);
-                } else {
-                  window.open(whatsappUrl, '_blank');
-                }
-              }}
-            >Consultar Outros Serviços</Link>
+              <WhatsAppButton href={whatsappUrl}>Consultar Outros Serviços</WhatsAppButton>
             </Button>
           </div>
         </ScrollReveal>
