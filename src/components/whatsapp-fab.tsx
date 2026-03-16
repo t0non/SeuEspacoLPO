@@ -41,7 +41,20 @@ const WhatsappFab = () => {
         )}
 
         {step >= 2 && (
-          <Link href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="block">
+          <Link 
+            href={whatsappUrl} 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="block"
+            onClick={(e) => {
+              e.preventDefault();
+              if (typeof window !== 'undefined' && window.gtag_report_conversion) {
+                window.gtag_report_conversion(whatsappUrl);
+              } else {
+                window.open(whatsappUrl, '_blank');
+              }
+            }}
+          >
             <div className="flex w-max max-w-[170px] sm:max-w-[210px] flex-col rounded-2xl rounded-br-sm bg-white px-2.5 py-2 shadow-xl border border-gray-100 animate-in fade-in slide-in-from-bottom-2 duration-300 hover:bg-gray-50 active:scale-95 transition-all">
               <span className="text-[11px] sm:text-[12px] font-bold text-slate-800">Seu Espaço LPO</span>
               <span className="text-[11px] sm:text-[12px] text-slate-600 mt-0.5 leading-snug whitespace-normal break-words">
@@ -52,7 +65,20 @@ const WhatsappFab = () => {
         )}
 
         {step >= 3 && (
-          <Link href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="block">
+          <Link 
+            href={whatsappUrl} 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="block"
+            onClick={(e) => {
+              e.preventDefault();
+              if (typeof window !== 'undefined' && window.gtag_report_conversion) {
+                window.gtag_report_conversion(whatsappUrl);
+              } else {
+                window.open(whatsappUrl, '_blank');
+              }
+            }}
+          >
             <div className="flex w-max max-w-[170px] sm:max-w-[210px] flex-col rounded-2xl rounded-br-sm bg-white px-2.5 py-2 shadow-xl border border-gray-100 animate-in fade-in slide-in-from-bottom-2 duration-300 hover:bg-gray-50 active:scale-95 transition-all">
               <span className="text-[11px] sm:text-[12px] font-bold text-slate-800">Seu Espaço LPO</span>
               <span className="text-[11px] sm:text-[12px] text-slate-600 mt-0.5 leading-snug whitespace-normal break-words">
@@ -70,6 +96,14 @@ const WhatsappFab = () => {
           target="_blank" 
           rel="noopener noreferrer" 
           className="flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-2xl hover:bg-[#20bd5a] hover:scale-105 active:scale-95 transition-all"
+          onClick={(e) => {
+            e.preventDefault();
+            if (typeof window !== 'undefined' && window.gtag_report_conversion) {
+              window.gtag_report_conversion(whatsappUrl);
+            } else {
+              window.open(whatsappUrl, '_blank');
+            }
+          }}
         >
           {/* SVG Oficial do WhatsApp */}
           <svg 

@@ -209,7 +209,17 @@ export default function Home() {
                     size="lg"
                     className="rounded-full px-8 py-6 border-white/30 text-white bg-transparent hover:bg-white/12 backdrop-blur-sm"
                   >
-                    <Link href={whatsappUrl}>Falar no WhatsApp</Link>
+                    <Link 
+                    href={whatsappUrl} 
+                    onClick={(e) => {
+                      e.preventDefault();
+                      if (typeof window !== 'undefined' && window.gtag_report_conversion) {
+                        window.gtag_report_conversion(whatsappUrl);
+                      } else {
+                        window.open(whatsappUrl, '_blank');
+                      }
+                    }}
+                  >Falar no WhatsApp</Link>
                   </Button>
                 </div>
               </div>
@@ -355,7 +365,17 @@ export default function Home() {
               size="lg"
               className="rounded-full text-lg py-7 px-10 border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300 shadow-lg hover:shadow-primary/20"
             >
-              <Link href={whatsappUrl}>Consultar Outros Serviços</Link>
+              <Link 
+              href={whatsappUrl} 
+              onClick={(e) => {
+                e.preventDefault();
+                if (typeof window !== 'undefined' && window.gtag_report_conversion) {
+                  window.gtag_report_conversion(whatsappUrl);
+                } else {
+                  window.open(whatsappUrl, '_blank');
+                }
+              }}
+            >Consultar Outros Serviços</Link>
             </Button>
           </div>
         </ScrollReveal>
