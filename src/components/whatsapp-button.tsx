@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import { gtag_report_conversion } from '@/lib/gtm-conversions';
 
 interface WhatsAppButtonProps {
   href: string;
@@ -12,11 +13,7 @@ interface WhatsAppButtonProps {
 const WhatsAppButton: React.FC<WhatsAppButtonProps> = ({ href, children, className }) => {
   const handleClick = (e: React.MouseEvent) => {
     e.preventDefault();
-    if (typeof window !== 'undefined' && window.gtag_report_conversion) {
-      window.gtag_report_conversion(href);
-    } else {
-      window.open(href, '_blank');
-    }
+    gtag_report_conversion(href);
   };
 
   return (

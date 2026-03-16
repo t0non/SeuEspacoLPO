@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { gtag_report_conversion } from '@/lib/gtm-conversions';
 
 const WhatsappFab = () => {
   const [step, setStep] = useState(0);
@@ -23,6 +24,11 @@ const WhatsappFab = () => {
       clearTimeout(secondMessageTimer);
     };
   }, []);
+
+  const handleClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    gtag_report_conversion(whatsappUrl);
+  };
 
   return (
     // z-[99999] com um número bem alto para furar qualquer bloqueio do site

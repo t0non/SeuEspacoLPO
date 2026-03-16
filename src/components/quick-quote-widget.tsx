@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
+import { gtag_report_conversion } from '@/lib/gtm-conversions';
 
 const QuickQuoteWidget = () => {
   const [isTyping, setIsTyping] = useState(true);
@@ -29,11 +30,7 @@ const QuickQuoteWidget = () => {
 
   const handleClick = (e: React.MouseEvent) => {
     e.preventDefault();
-    if (typeof window !== 'undefined' && window.gtag_report_conversion) {
-      window.gtag_report_conversion(whatsappUrl);
-    } else {
-      window.open(whatsappUrl, '_blank');
-    }
+    gtag_report_conversion(whatsappUrl);
   };
 
   return (
