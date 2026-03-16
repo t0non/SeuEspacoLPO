@@ -103,7 +103,7 @@ export default function Home() {
                 size="lg"
                 className="rounded-full text-lg py-7 px-10 bg-accent text-accent-foreground hover:bg-accent/90 hover:scale-105 transition-all shadow-xl shadow-accent/20"
               >
-                <Link href="#quote">Solicitar Orçamento</Link>
+                <WhatsAppButton href={whatsappUrl}>Solicitar Orçamento</WhatsAppButton>
               </Button>
               <Button
                 asChild
@@ -165,7 +165,7 @@ export default function Home() {
                 size="lg"
                 className="rounded-full px-8 py-6 bg-accent text-accent-foreground hover:bg-accent/90 shadow-lg shadow-accent/20"
               >
-                <Link href="#quote">Solicitar Orçamento</Link>
+                <WhatsAppButton href={whatsappUrl}>Solicitar Orçamento</WhatsAppButton>
               </Button>
             </div>
           </div>
@@ -202,7 +202,7 @@ export default function Home() {
                     size="lg"
                     className="rounded-full px-8 py-6 bg-white text-primary hover:bg-white/90"
                   >
-                    <Link href="#quote">Solicitar Orçamento</Link>
+                    <WhatsAppButton href={whatsappUrl}>Solicitar Orçamento</WhatsAppButton>
                   </Button>
                   <Button
                     asChild
@@ -234,7 +234,7 @@ export default function Home() {
                  size="lg"
                  className="rounded-full px-8 py-6 bg-primary text-primary-foreground hover:bg-primary/90"
                >
-                 <Link href="#quote">Agendar Limpeza</Link>
+                 <WhatsAppButton href={whatsappUrl}>Agendar Limpeza</WhatsAppButton>
                </Button>
                <Button
                  asChild
@@ -242,7 +242,7 @@ export default function Home() {
                  size="lg"
                  className="rounded-full px-8 py-6 border-slate-300 text-slate-700 hover:bg-slate-100"
                >
-                 <Link href="#scope">Ver Serviços</Link>
+                 <WhatsAppButton href={whatsappUrl}>Agendar Limpeza</WhatsAppButton>
                </Button>
              </div>
           </div>
@@ -331,7 +331,7 @@ export default function Home() {
                   size="lg"
                   className="rounded-full px-8 py-6 bg-white text-primary hover:bg-white/90"
                 >
-                  <Link href="#quote">Solicitar Orçamento</Link>
+                  <WhatsAppButton href={whatsappUrl}>Solicitar Orçamento</WhatsAppButton>
                 </Button>
               </div>
             </div>

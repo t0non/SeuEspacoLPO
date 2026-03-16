@@ -6,6 +6,10 @@ import { useState, useEffect } from 'react';
 
 const QuickQuoteWidget = () => {
   const [isTyping, setIsTyping] = useState(true);
+  
+  const phoneNumber = '5511988259447'; // (11) 98825-9447
+  const message = 'Olá! Preciso de ajuda com a limpeza, gostaria de um orçamento.';
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -23,10 +27,19 @@ const QuickQuoteWidget = () => {
     </div>
   );
 
+  const handleClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (typeof window !== 'undefined' && window.gtag_report_conversion) {
+      window.gtag_report_conversion(whatsappUrl);
+    } else {
+      window.open(whatsappUrl, '_blank');
+    }
+  };
+
   return (
     <div className="flex items-center justify-center gap-4 group">
       {/* Chat Bubble */}
-      <Link href="#quote" className="cursor-pointer">
+      <Link href={whatsappUrl} onClick={handleClick} className="cursor-pointer">
         <div className="relative flex items-center justify-center bg-white rounded-xl p-5 shadow-lg max-w-xs min-h-[88px] transition-transform transform group-hover:scale-105">
            {isTyping ? (
             <TypingIndicator />
