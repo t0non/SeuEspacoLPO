@@ -67,7 +67,7 @@ export default function InstantQuoteSection() {
   const calculationMode = form.watch('calculationMode');
 
   function onSubmit(values: FormValues) {
-    const phoneNumber = '5511999999999'; // Placeholder
+    const phoneNumber = '5511988259447'; // (11) 98825-9447
     
     const messageParts = ["Olá! Acabei de preencher a calculadora no site:"];
 

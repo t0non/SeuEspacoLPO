@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
             Atendemos toda São Paulo e Região com excelência em limpeza pós-obra.
         </p>
         <div className="flex justify-center gap-6 mb-6">
-            <a href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">WhatsApp</a>
+            <a href="https://wa.me/5511988259447" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">WhatsApp</a>
             <a href="mailto:contato@seuespacolpo.com" className="hover:text-accent transition-colors">Email</a>
         </div>
         <p className="text-sm text-primary-foreground/60 mb-2">CNPJ: 62.495.769/0001-85</p>

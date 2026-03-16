@@ -28,7 +28,7 @@ const Header: React.FC = () => {
     }
   }, [isMenuOpen]);
 
-  const phoneNumber = '5511999999999';
+  const phoneNumber = '5511988259447'; // (11) 98825-9447
   const message = 'Olá! Gostaria de um orçamento gratuito para limpeza pós-obra.';
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
