@@ -62,7 +62,7 @@ const processSteps = [
 
 export default function Home() {
   const heroImage = PlaceHolderImages.find((img) => img.id === 'hero-lpo');
-  const phoneNumber = '5511999999999'; // Placeholder
+  const phoneNumber = '5511988259447'; // (11) 98825-9447
   const otherServicesMessage = 'Olá! Gostaria de consultar sobre outros serviços de limpeza que não encontrei no site.';
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(otherServicesMessage)}`;
 

@@ -7,7 +7,7 @@ const WhatsappFab = () => {
   const [step, setStep] = useState(0);
 
   // Configurações do WhatsApp
-  const phoneNumber = '5511999999999'; // Coloque seu número aqui
+  const phoneNumber = '5511988259447'; // (11) 98825-9447
   const message = 'Olá! Preciso de ajuda com a limpeza, gostaria de um orçamento.';
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
