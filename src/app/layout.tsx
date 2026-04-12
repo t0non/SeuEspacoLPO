@@ -83,6 +83,9 @@ export const metadata: Metadata = {
     'geo.position': '-23.6447;-46.6759',
     'ICBM': '-23.6447, -46.6759',
   },
+  verification: {
+    google: 'UWo2PB2qF1XLCbuobMIaxMLPTjtzJ967inc184NKS14',
+  },
 };
 
 export default function RootLayout({
@@ -102,6 +105,7 @@ export default function RootLayout({
             })(window,document,'script','dataLayer','GTM-M8Q3XJ82');`,
           }}
         />
+        <meta name="google-site-verification" content="UWo2PB2qF1XLCbuobMIaxMLPTjtzJ967inc184NKS14" />
         <JsonLd />
       </head>
       <body className={cn('font-sans antialiased bg-background text-foreground')}>
