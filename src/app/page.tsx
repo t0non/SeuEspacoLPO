@@ -133,7 +133,7 @@ export default function Home() {
                 className="rounded-full text-lg sm:text-xl md:text-2xl py-7 md:py-10 px-8 md:px-16 w-full sm:w-auto bg-accent text-white hover:bg-accent/90 hover:scale-105 transition-all shadow-[0_20px_50px_-12px_rgba(34,197,94,0.4)] flex items-center justify-center gap-4 font-bold uppercase tracking-widest"
               >
                 <WhatsAppButton href={whatsappUrl}>
-                  <Image src="/whatsapp-icon.png" alt="WhatsApp" width={32} height={32} className="size-8 object-contain brightness-0 invert" />
+                  <Image src="/whatsapp-icon.png" alt="WhatsApp" width={32} height={32} className="size-8 object-contain brightness-0 invert shrink-0" />
                   Solicitar Orçamento Grátis
                 </WhatsAppButton>
               </Button>
@@ -182,7 +182,7 @@ export default function Home() {
                     className="rounded-full text-lg sm:text-xl md:text-2xl py-7 md:py-9 px-8 md:px-14 w-full sm:w-auto bg-primary text-white hover:bg-primary/90 hover:scale-105 transition-all shadow-[0_20px_50px_-12px_rgba(15,23,42,0.3)] flex items-center justify-center gap-4 font-bold uppercase tracking-widest"
                   >
                     <WhatsAppButton href={whatsappUrl}>
-                      <Image src="/whatsapp-icon.png" alt="WhatsApp" width={28} height={28} className="size-7 object-contain brightness-0 invert" />
+                      <Image src="/whatsapp-icon.png" alt="WhatsApp" width={28} height={28} className="size-7 object-contain brightness-0 invert shrink-0" />
                       Falar com Especialista
                     </WhatsAppButton>
                   </Button>
@@ -239,7 +239,7 @@ export default function Home() {
                 className="rounded-full text-lg sm:text-xl md:text-2xl py-7 md:py-9 px-8 md:px-14 w-full sm:w-auto bg-primary text-white hover:bg-primary/90 hover:scale-105 transition-all shadow-[0_20px_50px_-12px_rgba(15,23,42,0.3)] flex items-center justify-center gap-4 font-bold uppercase tracking-widest"
               >
                 <WhatsAppButton href={whatsappUrl}>
-                  <Image src="/whatsapp-icon.png" alt="WhatsApp" width={32} height={32} className="size-8 object-contain brightness-0 invert" />
+                  <Image src="/whatsapp-icon.png" alt="WhatsApp" width={32} height={32} className="size-8 object-contain brightness-0 invert shrink-0" />
                   Agendar Minha Limpeza
                 </WhatsAppButton>
               </Button>
@@ -272,7 +272,7 @@ export default function Home() {
                   className="relative rounded-full px-8 md:px-20 py-8 md:py-12 w-full sm:w-auto bg-accent text-white hover:bg-black transition-all duration-500 text-lg sm:text-2xl md:text-4xl font-black shadow-[0_25px_60px_-15px_rgba(34,197,94,0.5)] flex items-center justify-center gap-4 group-hover:scale-105 uppercase tracking-tighter"
                 >
                   <WhatsAppButton href={whatsappUrl}>
-                    <Image src="/whatsapp-icon.png" alt="WhatsApp" width={56} height={56} className="size-10 md:size-14 object-contain brightness-0 invert" />
+                    <Image src="/whatsapp-icon.png" alt="WhatsApp" width={56} height={56} className="size-10 md:size-14 object-contain brightness-0 invert shrink-0" />
                     VAMOS RESOLVER AGORA!
                   </WhatsAppButton>
                 </Button>
@@ -313,7 +313,7 @@ export default function Home() {
                 className="rounded-full text-lg sm:text-xl md:text-2xl py-7 md:py-9 px-8 md:px-14 w-full sm:w-auto bg-primary text-white hover:bg-primary/90 hover:scale-105 transition-all shadow-[0_20px_50px_-12px_rgba(15,23,42,0.3)] flex items-center justify-center gap-4 font-bold uppercase tracking-widest"
               >
                 <WhatsAppButton href={whatsappUrl}>
-                  <Image src="/whatsapp-icon.png" alt="WhatsApp" width={32} height={32} className="size-8 object-contain brightness-0 invert" />
+                  <Image src="/whatsapp-icon.png" alt="WhatsApp" width={32} height={32} className="size-8 object-contain brightness-0 invert shrink-0" />
                   Tirar dúvidas por WhatsApp
                 </WhatsAppButton>
               </Button>
