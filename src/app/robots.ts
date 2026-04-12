@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: '/private/',
     },
-    sitemap: 'https://seuespacolpo.com.br/sitemap.xml',
+    sitemap: 'https://www.seuespacolpo.com.br/sitemap.xml',
   };
 }

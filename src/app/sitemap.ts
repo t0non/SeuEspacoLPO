@@ -3,11 +3,11 @@ import { MetadataRoute } from 'next';
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: 'https://seuespacolpo.com.br',
+      url: 'https://www.seuespacolpo.com.br',
       lastModified: new Date(),
-      changeFrequency: 'monthly',
+      changeFrequency: 'weekly',
       priority: 1,
     },
-    // Add more URLs here as you create more pages
+    // Adicione mais URLs aqui conforme criar novas páginas
   ];
 }
