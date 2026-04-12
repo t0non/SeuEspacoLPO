@@ -122,7 +122,7 @@ export default function Home() {
               <span className="text-accent">em São Paulo</span>.
             </h1>
             
-            <p className="text-lg md:text-2xl text-white/80 font-light max-w-2xl mx-auto mb-10 animate-in fade-in slide-in-from-bottom-6 duration-700 delay-200">
+            <p className="text-lg md:text-2xl text-white/80 font-light max-w-2xl mx-auto mb-10 animate-in fade-in slide-in-from-bottom-6 duration-700 delay-200 text-center px-4">
               Limpeza técnica especializada para projetos residenciais e corporativos com entrega em 24h e total segurança.
             </p>
             
@@ -130,7 +130,7 @@ export default function Home() {
               <Button
                 asChild
                 size="lg"
-                className="rounded-full text-xl md:text-2xl py-9 px-12 bg-accent text-white hover:bg-accent/90 hover:scale-105 transition-all shadow-2xl shadow-accent/40 flex items-center gap-3 font-bold uppercase tracking-wide"
+                className="rounded-full text-lg sm:text-xl md:text-2xl py-7 md:py-10 px-8 md:px-16 w-full sm:w-auto bg-accent text-white hover:bg-accent/90 hover:scale-105 transition-all shadow-[0_20px_50px_-12px_rgba(34,197,94,0.4)] flex items-center justify-center gap-4 font-bold uppercase tracking-widest"
               >
                 <WhatsAppButton href={whatsappUrl}>
                   <Image src="/whatsapp-icon.png" alt="WhatsApp" width={32} height={32} className="size-8 object-contain brightness-0 invert" />
@@ -164,13 +164,13 @@ export default function Home() {
               
               <div className="space-y-6">
                 {teamStats.map((stat, idx) => (
-                  <div key={idx} className="flex gap-4 p-4 rounded-3xl border border-slate-100 hover:border-accent/30 hover:bg-slate-50 transition-all group">
-                    <div className="bg-slate-50 rounded-2xl p-4 group-hover:bg-accent group-hover:text-white transition-colors">
+                  <div key={idx} className="flex flex-col sm:flex-row items-center sm:items-start gap-4 p-6 rounded-3xl border border-slate-100 hover:border-accent/30 hover:bg-slate-50 transition-all group text-center sm:text-left">
+                    <div className="bg-slate-50 rounded-2xl p-4 group-hover:bg-accent group-hover:text-white transition-colors shrink-0">
                       {stat.icon}
                     </div>
                     <div>
-                      <h4 className="text-lg font-bold text-primary mb-1">{stat.title}</h4>
-                      <p className="text-muted-foreground text-sm">{stat.text}</p>
+                      <h4 className="text-xl font-bold text-primary mb-1">{stat.title}</h4>
+                      <p className="text-muted-foreground text-sm leading-relaxed">{stat.text}</p>
                     </div>
                   </div>
                 ))}
@@ -179,7 +179,7 @@ export default function Home() {
                   <Button
                     asChild
                     size="lg"
-                    className="rounded-full text-xl py-8 px-12 bg-primary text-white hover:bg-primary/90 hover:scale-105 transition-all shadow-2xl shadow-primary/30 flex items-center gap-3 font-bold uppercase tracking-wide"
+                    className="rounded-full text-lg sm:text-xl md:text-2xl py-7 md:py-9 px-8 md:px-14 w-full sm:w-auto bg-primary text-white hover:bg-primary/90 hover:scale-105 transition-all shadow-[0_20px_50px_-12px_rgba(15,23,42,0.3)] flex items-center justify-center gap-4 font-bold uppercase tracking-widest"
                   >
                     <WhatsAppButton href={whatsappUrl}>
                       <Image src="/whatsapp-icon.png" alt="WhatsApp" width={28} height={28} className="size-7 object-contain brightness-0 invert" />
@@ -236,7 +236,7 @@ export default function Home() {
               <Button
                 asChild
                 size="lg"
-                className="rounded-full text-xl py-8 px-12 bg-primary text-white hover:bg-primary/90 hover:scale-105 transition-all shadow-2xl shadow-primary/30 flex items-center gap-3 font-bold uppercase tracking-wide"
+                className="rounded-full text-lg sm:text-xl md:text-2xl py-7 md:py-9 px-8 md:px-14 w-full sm:w-auto bg-primary text-white hover:bg-primary/90 hover:scale-105 transition-all shadow-[0_20px_50px_-12px_rgba(15,23,42,0.3)] flex items-center justify-center gap-4 font-bold uppercase tracking-widest"
               >
                 <WhatsAppButton href={whatsappUrl}>
                   <Image src="/whatsapp-icon.png" alt="WhatsApp" width={32} height={32} className="size-8 object-contain brightness-0 invert" />
@@ -269,7 +269,7 @@ export default function Home() {
                 <Button
                   asChild
                   size="lg"
-                  className="relative rounded-full px-12 md:px-20 py-10 md:py-12 bg-accent text-white hover:bg-black transition-all duration-500 text-2xl md:text-4xl font-black shadow-2xl flex items-center gap-4 group-hover:scale-105"
+                  className="relative rounded-full px-8 md:px-20 py-8 md:py-12 w-full sm:w-auto bg-accent text-white hover:bg-black transition-all duration-500 text-lg sm:text-2xl md:text-4xl font-black shadow-[0_25px_60px_-15px_rgba(34,197,94,0.5)] flex items-center justify-center gap-4 group-hover:scale-105 uppercase tracking-tighter"
                 >
                   <WhatsAppButton href={whatsappUrl}>
                     <Image src="/whatsapp-icon.png" alt="WhatsApp" width={56} height={56} className="size-10 md:size-14 object-contain brightness-0 invert" />
@@ -306,11 +306,11 @@ export default function Home() {
               </Accordion>
             </div>
 
-            <div className="mt-16 flex flex-col items-center">
+            <div className="mt-16 flex flex-col items-center px-4 w-full">
               <Button
                 asChild
                 size="lg"
-                className="rounded-full text-xl py-8 px-12 bg-primary text-white hover:bg-primary/90 hover:scale-105 transition-all shadow-2xl shadow-primary/30 flex items-center gap-3 font-bold uppercase tracking-wide"
+                className="rounded-full text-lg sm:text-xl md:text-2xl py-7 md:py-9 px-8 md:px-14 w-full sm:w-auto bg-primary text-white hover:bg-primary/90 hover:scale-105 transition-all shadow-[0_20px_50px_-12px_rgba(15,23,42,0.3)] flex items-center justify-center gap-4 font-bold uppercase tracking-widest"
               >
                 <WhatsAppButton href={whatsappUrl}>
                   <Image src="/whatsapp-icon.png" alt="WhatsApp" width={32} height={32} className="size-8 object-contain brightness-0 invert" />
