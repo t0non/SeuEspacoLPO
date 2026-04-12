@@ -313,7 +313,6 @@ export default function Home() {
                 className="rounded-full text-lg sm:text-xl md:text-2xl py-7 md:py-9 px-8 md:px-14 w-full sm:w-auto bg-primary text-white hover:bg-primary/90 hover:scale-105 transition-all shadow-[0_20px_50px_-12px_rgba(15,23,42,0.3)] flex items-center justify-center gap-4 font-bold uppercase tracking-widest"
               >
                 <WhatsAppButton href={whatsappUrl}>
-                  <Image src="/whatsapp-icon.png" alt="WhatsApp" width={32} height={32} className="size-8 object-contain brightness-0 invert shrink-0" />
                   Tirar dúvidas por WhatsApp
                 </WhatsAppButton>
               </Button>
