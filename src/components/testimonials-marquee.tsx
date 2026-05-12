@@ -4,33 +4,33 @@ import Image from "next/image";
 
 const testimonials = [
   {
-    name: "Ricardo M.",
-    initial: "R",
-    review: "Salvaram minha mudança. A equipe chegou pontual e tirou toda a tinta do piso sem riscar nada. Recomendo demais!",
+    name: "Eng. Marcos T.",
+    initial: "M",
+    review: "Serviço técnico de altíssimo nível. Entregaram a limpeza final de um escritório de 400m² em tempo recorde para a inauguração. Nota fiscal e documentação tudo ok.",
     stars: 5,
   },
   {
-    name: "Ana Paula S.",
+    name: "Dra. Patrícia K.",
+    initial: "P",
+    review: "Como arquiteta, sou muito exigente com os acabamentos. A equipe da LPO é a única que confio para entregar as chaves aos meus clientes. Perfeccionismo puro.",
+    stars: 5,
+  },
+  {
+    name: "André L. (Facilities)",
     initial: "A",
-    review: "Estava desesperada com o pó de gesso. Em 6 horas meu apartamento estava brilhando. Serviço de luxo.",
+    review: "Excelente atendimento corporativo. Cumprem rigorosamente as normas de segurança e o cronograma. Essencial para grandes obras comerciais.",
     stars: 5,
   },
   {
-    name: "Carlos E.",
-    initial: "C",
-    review: "Melhor investimento do pós-obra. Tentei limpar sozinho e desisti. Eles têm equipamentos que eu nem sabia que existiam.",
+    name: "Juliana R.",
+    initial: "J",
+    review: "Estava desesperada com o pó fino nos armários novos. Eles limparam cada cantinho com um cuidado impressionante. Meu apartamento ficou impecável.",
     stars: 5,
   },
   {
-    name: "Fernanda O.",
-    initial: "F",
-    review: "Profissionais e discretos. Deixei a chave na portaria e quando voltei parecia outro lugar. Nota 10.",
-    stars: 5,
-  },
-  {
-    name: "Roberto A.",
+    name: "Renato G.",
     initial: "R",
-    review: "Preço justo pela qualidade. O banheiro ficou impecável, tiraram manchas que achei que eram eternas.",
+    review: "Precisávamos abrir a loja em 24h após a reforma. A mobilização da equipe foi fantástica. Resolveram tudo sem que eu tivesse que me preocupar com nada.",
     stars: 5,
   },
 ];
@@ -53,7 +53,7 @@ const TestimonialCard = ({ name, initial, review, stars, color } : { name: strin
                     </div>
                     <div>
                         <div className="flex items-center gap-1.5">
-                            <p className="font-bold text-black">{name}</p>
+                            <p className="font-bold text-slate-800">{name}</p>
                             <CheckCircle className="size-4 text-emerald-500 fill-emerald-100" />
                         </div>
                          <div className="flex">
@@ -65,7 +65,7 @@ const TestimonialCard = ({ name, initial, review, stars, color } : { name: strin
                 </div>
                 <Image src="https://files.catbox.moe/hhs2e9.png" alt="Google Review" width={24} height={24} className="size-6" />
             </div>
-            <p className="text-black text-sm">
+            <p className="text-slate-600 text-sm">
                 "{review}"
             </p>
         </div>
@@ -81,9 +81,6 @@ export default function TestimonialsMarquee() {
                 <h2 className="text-3xl md:text-4xl font-headline font-bold text-white mb-4">
                     O que dizem nossos clientes
                 </h2>
-                <p className="text-lg text-primary-foreground/70 max-w-2xl mx-auto">
-                    Avaliações reais de quem confiou na Seu Espaço LPO.
-                </p>
             </div>
              <div
                 className="group relative w-full overflow-hidden"
