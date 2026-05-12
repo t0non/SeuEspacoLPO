@@ -138,10 +138,10 @@ export default function Home() {
               <Button
                 asChild
                 size="lg"
-                className="rounded-full text-lg sm:text-xl md:text-2xl py-7 md:py-10 px-8 md:px-16 w-full sm:w-auto bg-accent text-white hover:bg-accent/90 hover:scale-105 transition-all shadow-[0_20px_50px_-12px_rgba(34,197,94,0.4)] flex items-center justify-center gap-4 font-bold uppercase tracking-widest"
+                className="rounded-full text-base sm:text-lg md:text-xl py-5 md:py-8 px-6 md:px-12 w-full sm:w-auto bg-accent text-white hover:bg-accent/90 hover:scale-105 transition-all shadow-[0_20px_50px_-12px_rgba(34,197,94,0.4)] flex items-center justify-center gap-3 font-bold uppercase tracking-widest"
               >
                 <WhatsAppButton href={whatsappUrl} aria-label="Solicitar orçamento gratuito via WhatsApp">
-                  <Image src="/whatsapp-icon.png" alt="WhatsApp" width={32} height={32} className="size-8 object-contain brightness-0 invert shrink-0" />
+                  <Image src="/whatsapp-icon.png" alt="WhatsApp" width={28} height={28} className="size-7 object-contain brightness-0 invert shrink-0" />
                   Solicitar Orçamento Grátis
                 </WhatsAppButton>
               </Button>
