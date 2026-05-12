@@ -99,6 +99,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className={cn(instrumentSans.variable)}>
       <head>
+        <link rel="preload" as="video" href="/sessao1.mp4" type="video/mp4" />
         <script
           dangerouslySetInnerHTML={{
             __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':

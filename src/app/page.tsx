@@ -114,7 +114,7 @@ export default function Home() {
             playsInline
             className="h-full w-full object-cover"
             src="/sessao1.mp4"
-            preload="metadata"
+            preload="auto"
             poster="/limpeza-geral.jpg"
             title="Apresentação Limpeza Pós-Obras"
             aria-label="Vídeo demonstrativo de limpeza pós-obra profissional"
