@@ -10,7 +10,6 @@ import {
 } from 'lucide-react';
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
-const InstantQuoteSection = dynamic(() => import('@/components/instant-quote-section'), { ssr: false });
 const TestimonialsMarquee = dynamic(() => import('@/components/testimonials-marquee'), { ssr: false });
 import {
   Accordion,
@@ -44,32 +43,38 @@ const serviceCards = [
   {
     title: "Vãos e Vidros",
     description: "Técnica especializada para remoção de respingos em janelas, esquadrias e fachadas comerciais.",
-    image: "/limpeza-vidros.jpg"
+    image: "/limpeza-vidros.jpg",
+    altText: "Serviço profissional de limpeza de vidros, janelas e vãos pós-obra em São Paulo"
   },
   {
     title: "Poeira Fina",
     description: "Eliminação total do pó pós-construção em forros, luminárias e áreas de difícil acesso.",
-    image: "/limpeza-poeiras.jpg"
+    image: "/limpeza-poeiras.jpg",
+    altText: "Remoção técnica de poeira fina pós-construção em ambientes residenciais e corporativos"
   },
   {
     title: "Recuperação de Piso",
     description: "Higienização profunda e recuperação de brilho em porcelanatos e revestimentos técnicos corporativos.",
-    image: "/limpeza-piso.jpg"
+    image: "/limpeza-piso.jpg",
+    altText: "Limpeza profunda e recuperação de pisos e porcelanatos encardidos de obra"
   },
   {
     title: "Estofados e Carpetes",
     description: "Limpeza profunda de sofás, poltronas e cadeiras de escritório, removendo resíduos e ácaros.",
-    image: "/limpeza-estofados.jpg"
+    image: "/limpeza-estofados.jpg",
+    altText: "Higienização profissional de estofados e carpetes afetados pela poeira da reforma"
   },
   {
     title: "Detalhamento Técnico",
     description: "Acabamento minucioso em metais, interruptores e luminárias para uma entrega impecável.",
-    image: "/limpeza-detalhes.jpg"
+    image: "/limpeza-detalhes.jpg",
+    altText: "Limpeza minuciosa de detalhes, metais e acabamentos finos pós-reforma"
   },
   {
     title: "Limpeza Geral 360",
     description: "Checklist completo para residências, lojas e escritórios. Seu imóvel pronto para inaugurar.",
-    image: "/limpeza-geral.jpg"
+    image: "/limpeza-geral.jpg",
+    altText: "Checklist completo de faxina pós-obra para mudança ou inauguração comercial"
   }
 ];
 
@@ -110,6 +115,9 @@ export default function Home() {
             className="h-full w-full object-cover"
             src="/sessao1.mp4"
             preload="metadata"
+            poster="/limpeza-geral.jpg"
+            title="Apresentação Limpeza Pós-Obras"
+            aria-label="Vídeo demonstrativo de limpeza pós-obra profissional"
           />
           <div className="absolute inset-0 bg-primary/40" />
           <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent" />
@@ -132,7 +140,7 @@ export default function Home() {
                 size="lg"
                 className="rounded-full text-lg sm:text-xl md:text-2xl py-7 md:py-10 px-8 md:px-16 w-full sm:w-auto bg-accent text-white hover:bg-accent/90 hover:scale-105 transition-all shadow-[0_20px_50px_-12px_rgba(34,197,94,0.4)] flex items-center justify-center gap-4 font-bold uppercase tracking-widest"
               >
-                <WhatsAppButton href={whatsappUrl}>
+                <WhatsAppButton href={whatsappUrl} aria-label="Solicitar orçamento gratuito via WhatsApp">
                   <Image src="/whatsapp-icon.png" alt="WhatsApp" width={32} height={32} className="size-8 object-contain brightness-0 invert shrink-0" />
                   Solicitar Orçamento Grátis
                 </WhatsAppButton>
@@ -181,7 +189,7 @@ export default function Home() {
                     size="lg"
                     className="rounded-full text-lg sm:text-xl md:text-2xl py-7 md:py-9 px-8 md:px-14 w-full sm:w-auto bg-primary text-white hover:bg-primary/90 hover:scale-105 transition-all shadow-[0_20px_50px_-12px_rgba(15,23,42,0.3)] flex items-center justify-center gap-4 font-bold uppercase tracking-widest"
                   >
-                    <WhatsAppButton href={whatsappUrl}>
+                    <WhatsAppButton href={whatsappUrl} aria-label="Falar com especialista da equipe via WhatsApp">
                       <Image src="/whatsapp-icon.png" alt="WhatsApp" width={28} height={28} className="size-7 object-contain brightness-0 invert shrink-0" />
                       Falar com Especialista
                     </WhatsAppButton>
@@ -213,7 +221,7 @@ export default function Home() {
                   {/* Background Image */}
                   <Image 
                     src={card.image} 
-                    alt={card.title} 
+                    alt={card.altText || card.title} 
                     fill
                     className="absolute inset-0 object-cover"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
@@ -238,7 +246,7 @@ export default function Home() {
                 size="lg"
                 className="rounded-full text-lg sm:text-xl md:text-2xl py-7 md:py-9 px-8 md:px-14 w-full sm:w-auto bg-primary text-white hover:bg-primary/90 hover:scale-105 transition-all shadow-[0_20px_50px_-12px_rgba(15,23,42,0.3)] flex items-center justify-center gap-4 font-bold uppercase tracking-widest"
               >
-                <WhatsAppButton href={whatsappUrl}>
+                <WhatsAppButton href={whatsappUrl} aria-label="Agendar serviço de limpeza via WhatsApp">
                   <Image src="/whatsapp-icon.png" alt="WhatsApp" width={32} height={32} className="size-8 object-contain brightness-0 invert shrink-0" />
                   Agendar Minha Limpeza
                 </WhatsAppButton>
@@ -256,10 +264,6 @@ export default function Home() {
       <section id="process" className="section-padding bg-slate-50 relative overflow-hidden">
         <div className="container-wide text-center">
           <ScrollReveal>
-            <div className="mt-8">
-              <InstantQuoteSection />
-            </div>
-
             {/* Mega CTA Button */}
             <div className="flex justify-center mt-12">
               <div className="relative group">
@@ -271,7 +275,7 @@ export default function Home() {
                   size="lg"
                   className="relative rounded-full px-8 md:px-20 py-8 md:py-12 w-full sm:w-auto bg-accent text-white hover:bg-black transition-all duration-500 text-lg sm:text-2xl md:text-4xl font-black shadow-[0_25px_60px_-15px_rgba(34,197,94,0.5)] flex items-center justify-center gap-4 group-hover:scale-105 uppercase tracking-tighter"
                 >
-                  <WhatsAppButton href={whatsappUrl}>
+                  <WhatsAppButton href={whatsappUrl} aria-label="Resolver limpeza pós-obra agora via WhatsApp">
                     <Image src="/whatsapp-icon.png" alt="WhatsApp" width={56} height={56} className="size-10 md:size-14 object-contain brightness-0 invert shrink-0" />
                     VAMOS RESOLVER AGORA!
                   </WhatsAppButton>
@@ -312,7 +316,7 @@ export default function Home() {
                 size="lg"
                 className="rounded-full text-lg sm:text-xl md:text-2xl py-7 md:py-9 px-8 md:px-14 w-full sm:w-auto bg-primary text-white hover:bg-primary/90 hover:scale-105 transition-all shadow-[0_20px_50px_-12px_rgba(15,23,42,0.3)] flex items-center justify-center gap-4 font-bold uppercase tracking-widest"
               >
-                <WhatsAppButton href={whatsappUrl}>
+                <WhatsAppButton href={whatsappUrl} aria-label="Tirar dúvidas finais via WhatsApp">
                   Tirar dúvidas por WhatsApp
                 </WhatsAppButton>
               </Button>

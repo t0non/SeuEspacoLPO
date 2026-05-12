@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://seuespacolpo.com.br/sitemap.xml

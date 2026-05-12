@@ -16,6 +16,9 @@ const instrumentSans = Instrument_Sans({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://seuespacolpo.com.br'),
+  alternates: {
+    canonical: 'https://seuespacolpo.com.br',
+  },
   title: {
     default: 'Seu Espaço LPO | Limpeza Pós-Obras em São Paulo',
     template: '%s | Seu Espaço LPO',
