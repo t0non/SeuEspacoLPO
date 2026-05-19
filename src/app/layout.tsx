@@ -15,22 +15,33 @@ const instrumentSans = Instrument_Sans({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://seuespacolpo.com.br'),
+  metadataBase: new URL('https://www.seuespacolpo.com.br'),
   alternates: {
-    canonical: 'https://seuespacolpo.com.br',
+    canonical: 'https://www.seuespacolpo.com.br',
   },
   title: {
-    default: 'Seu Espaço LPO | Limpeza Pós-Obras em São Paulo',
+    default: 'Limpeza Pós-Obra em São Paulo | Seu Espaço LPO — Orçamento em 30 min',
     template: '%s | Seu Espaço LPO',
   },
   description:
-    'Especialistas em Limpeza Pós-Obras em São Paulo. Atendemos Santo Amaro, Moema, Diadema e toda a região. Limpeza profissional e detalhada para sua reforma.',
+    'Limpeza pós-obra profissional em São Paulo com equipe CLT, maquinário industrial e entrega em 24h. ⭐ 5,0/5 em 18 avaliações reais no Google. Atendemos Santo Amaro, Moema, Diadema, Brooklin e toda a Grande SP. Orçamento grátis via WhatsApp em até 30 minutos!',
   keywords: [
+    'limpeza pós obra São Paulo',
     'limpeza pós obra',
-    'limpeza técnica',
-    'limpeza de luxo',
-    'limpeza pós reforma',
-    'faxina pós obra',
+    'limpeza pós reforma São Paulo',
+    'faxina pós obra SP',
+    'limpeza técnica pós obra',
+    'empresa de limpeza pós obra',
+    'limpeza de obra residencial',
+    'limpeza de obra comercial',
+    'limpeza pós reforma Santo Amaro',
+    'limpeza pós obra Moema',
+    'limpeza pós obra Diadema',
+    'limpeza pós reforma Brooklin',
+    'limpeza pós obra Pinheiros',
+    'limpeza de vidros pós obra',
+    'remoção de poeira pós construção',
+    'limpeza pós obra preço',
     'São Paulo',
     'Santo Amaro',
     'Moema',
@@ -38,6 +49,8 @@ export const metadata: Metadata = {
     'Brooklin',
     'Diadema',
     'São Bernardo do Campo',
+    'Vila Mariana',
+    'Campo Belo',
   ],
   authors: [{ name: 'Seu Espaço LPO' }],
   creator: 'Seu Espaço LPO',
@@ -50,23 +63,23 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'pt_BR',
-    url: 'https://seuespacolpo.com.br',
+    url: 'https://www.seuespacolpo.com.br',
     siteName: 'Seu Espaço LPO',
-    title: 'Seu Espaço LPO | Limpeza Pós Obra Profissional',
-    description: 'O toque final que sua reforma merece. Limpeza técnica e detalhada para residências e comércios em São Paulo.',
+    title: 'Limpeza Pós-Obra em São Paulo | Seu Espaço LPO',
+    description: 'Sua reforma terminou. Agora é hora do toque final. Limpeza técnica pós-obra com equipe CLT, maquinário industrial e entrega garantida em 24h. Orçamento grátis!',
     images: [
       {
-        url: 'https://files.catbox.moe/gfptca.png', // Using the logo as default OG image
+        url: 'https://files.catbox.moe/gfptca.png',
         width: 1200,
         height: 630,
-        alt: 'Seu Espaço LPO - Limpeza Pós Obra',
+        alt: 'Seu Espaço LPO - Limpeza Pós Obra Profissional em São Paulo',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Seu Espaço LPO | Limpeza Pós Obra de Alto Padrão',
-    description: 'Especialistas em Limpeza Pós-Obras em São Paulo. Pronta para morar em até 24h.',
+    title: 'Limpeza Pós-Obra em São Paulo | Seu Espaço LPO',
+    description: 'Equipe técnica especializada. Remoção de resíduos de obra, poeira fina e respingos. Pronto para morar em até 24h. Orçamento grátis!',
     images: ['https://files.catbox.moe/gfptca.png'],
   },
   robots: {
@@ -85,6 +98,7 @@ export const metadata: Metadata = {
     'geo.placename': 'São Paulo',
     'geo.position': '-23.6447;-46.6759',
     'ICBM': '-23.6447, -46.6759',
+    'theme-color': '#0f1f3c',
   },
   verification: {
     google: 'UWo2PB2qF1XLCbuobMIaxMLPTjtzJ967inc184NKS14',
@@ -107,6 +121,18 @@ export default function RootLayout({
             j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
             })(window,document,'script','dataLayer','GTM-WZ4DGTDT');`,
+          }}
+        />
+        {/* Google Ads Global Site Tag (gtag.js) */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17931024307" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'AW-17931024307');
+            `,
           }}
         />
         <meta name="google-site-verification" content="UWo2PB2qF1XLCbuobMIaxMLPTjtzJ967inc184NKS14" />
